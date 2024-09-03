@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://d2nf1glsq7la0"]
+
+[ext_resource type="Material" uid="uid://daye8upelfevp" path="res://Assets/Models/CheeseMineAssets/Materials/dc_crate.material" id="1_dpvcv"]
+[ext_resource type="Texture2D" uid="uid://cwov5qchdmw05" path="res://Assets/Sprites/General/original-large.png" id="2_rtatf"]
+[ext_resource type="Texture2D" uid="uid://dfmvhsynjs8q1" path="res://Assets/Sprites/General/made-with-godot-dark.png" id="3_ocui2"]
+[ext_resource type="Texture2D" uid="uid://h3satdtqd7yt" path="res://Assets/Sprites/General/blender.png" id="4_lvwm3"]
+[ext_resource type="Texture2D" uid="uid://c3agsk0rh66p0" path="res://Assets/Sprites/General/haalogo.png" id="5_e0rq1"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m3foh"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1, 1.00001),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0),
+"name": "mat_crates",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_axvxf"]
+resource_name = "crate_b-bddab2a2202a7bd22eafb3725fbb2d46_crate_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1, 1.00001),
+"attribute_data": PackedByteArray(0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 9, 0, 3, 0, 0, 0, 6, 0, 9, 0, 8, 0, 21, 0, 10, 0, 8, 0, 19, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 13, 0, 4, 0, 15, 0, 13, 0, 2, 0, 4, 0, 7, 0, 12, 0, 18, 0, 7, 0, 1, 0, 12, 0, 22, 0, 5, 0, 11, 0, 22, 0, 16, 0, 5, 0),
+"material": ExtResource("1_dpvcv"),
+"name": "mat_crates",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 255, 127, 255, 127, 255, 191, 255, 127, 0, 0, 255, 255, 255, 191, 255, 127, 255, 127, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 255, 191, 255, 127, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 0, 0, 255, 191, 0, 0, 255, 127, 255, 127, 255, 191, 255, 127, 0, 0, 255, 255, 255, 191, 255, 255, 255, 255, 0, 0, 255, 191, 0, 0, 255, 127, 255, 127, 255, 191, 255, 255, 255, 255, 0, 0, 255, 191, 255, 127, 255, 255, 0, 0, 255, 191, 255, 127, 0, 0, 255, 255, 255, 191, 255, 127, 255, 127, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 0, 0, 255, 191, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 0, 0, 255, 255, 255, 191, 255, 255, 255, 255, 0, 0, 255, 191, 255, 255, 255, 127, 255, 127, 255, 255, 255, 255, 255, 255, 0, 0, 255, 191, 255, 127, 255, 255, 0, 0, 255, 191, 255, 255, 255, 127, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_m3foh")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tb1f3"]
+size = Vector3(1.19653, 1, 1.22025)
+
+[node name="crate_b" type="Node3D"]
+
+[node name="crate" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_axvxf")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0301514, 0.508856, 0.0252228)
+shape = SubResource("BoxShape3D_tb1f3")
+
+[node name="GodotCostado" type="Decal" parent="."]
+transform = Transform3D(0.2, 1.72295e-09, 1.86265e-10, -1.627e-09, 0.194083, -0.0482895, -5.96755e-10, 0.0482895, 0.194083, -0.00237892, 0.464846, 0.509771)
+size = Vector3(2.28577, 2.39026, 0.455566)
+texture_albedo = ExtResource("2_rtatf")
+upper_fade = 9.01718e-05
+lower_fade = 1e-05
+
+[node name="GodotArriba" type="Decal" parent="."]
+transform = Transform3D(0.2, 1.72295e-09, 1.86265e-10, -6.27175e-10, 0.0519223, 0.193143, 1.61552e-09, -0.193143, 0.0519223, -0.00237892, 1.02835, -0.0961649)
+size = Vector3(2.28577, 2.39026, 0.455566)
+texture_albedo = ExtResource("2_rtatf")
+upper_fade = 9.01718e-05
+lower_fade = 1e-05
+
+[node name="MadeByGodot" type="Decal" parent="."]
+transform = Transform3D(0.220393, 0.010707, -0.203254, -0.203174, 0.0294351, -0.218755, 0.0121352, 0.29836, 0.0288756, 0.217394, 0.712256, 0.555764)
+texture_albedo = ExtResource("3_ocui2")
+
+[node name="Blender" type="Decal" parent="."]
+transform = Transform3D(-0.0360931, 0.497291, 0.0374031, 0.000848592, 0.0375621, -0.498586, -0.498695, -0.0359276, -0.00355546, 0.498372, 0.744372, -0.0075723)
+size = Vector3(0.756577, 0.237259, 0.778809)
+texture_albedo = ExtResource("4_lvwm3")
+
+[node name="HAA" type="Decal" parent="."]
+transform = Transform3D(0.0428686, -0.195301, 0.00445587, 0, -0.0045619, -0.199948, 0.195352, 0.0428575, -0.000977811, -0.491045, 0.741025, 0.255984)
+texture_albedo = ExtResource("5_e0rq1")

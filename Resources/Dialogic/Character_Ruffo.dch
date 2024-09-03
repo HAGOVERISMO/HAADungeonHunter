@@ -1,0 +1,42 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {
+"Ruffito": {
+"mode": 0,
+"name": "Ruffito",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://addons/dialogic/Example Assets/sound-effects/typing4.wav",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
+"style": ""
+},
+"default_portrait": "ruffo",
+"description": "Es superfly",
+"display_name": "Ruffo",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"ruffo": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/Characters/Player/ruffito2.png\""
+},
+"ignore_char_scale": true,
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 0.25,
+"scene": "",
+"sound_mood": "Ruffito"
+}
+},
+"scale": 1.0
+}

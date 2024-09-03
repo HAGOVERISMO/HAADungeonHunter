@@ -1,0 +1,9 @@
+join character_BlueMan 2 [animation="Bounce In Out" length="1"]
+[update_position position="2" vector="Vector2(0, -155)" time="0.5"]
+character_BlueMan (BlueMan): Stop scrolling
+character_BlueMan (BlueMan): If you want to win this game
+character_BlueMan (BlueMan): repeat this number
+character_BlueMan (BlueMan): 7369206c6569737465206573746f2074656e6573207175652073616265722071756520236c6153696c6c6145734465527566666f2121
+leave character_BlueMan
+[signal arg="BlueManEnding"]
+[end_timeline]

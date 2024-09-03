@@ -1,0 +1,476 @@
+[gd_scene load_steps=57 format=3 uid="uid://cxghxsgoyv2am"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy/Enemy.cs" id="1_mg2bf"]
+[ext_resource type="Script" path="res://Scripts/Resources/StatResource.cs" id="2_o6ybb"]
+[ext_resource type="FontFile" uid="uid://dtv0n3gmb7v37" path="res://Assets/TinyPixie2.ttf" id="3_a6c00"]
+[ext_resource type="Shader" path="res://Shaders/character_hurt.gdshader" id="3_rkxao"]
+[ext_resource type="Texture2D" uid="uid://2vugwaod86rh" path="res://Assets/Sprites/Characters/Bot/Attack/bot atacaver2.png" id="5_jjfs3"]
+[ext_resource type="Texture2D" uid="uid://41668ecksgnv" path="res://Assets/Sprites/Characters/Bot/Hurt/bot Dañover2.png" id="5_phyuw"]
+[ext_resource type="Texture2D" uid="uid://dhxlu8dmldb0b" path="res://Assets/Sprites/Characters/Bot/Death/bot muerever8.png" id="5_tpt3q"]
+[ext_resource type="Texture2D" uid="uid://btkmc0drk7mh6" path="res://Assets/Sprites/Characters/Bot/Idle/bot idlever3.png" id="5_yicw7"]
+[ext_resource type="Texture2D" uid="uid://c77pqe4x1bh3x" path="res://Assets/Sprites/Characters/Bot/Attack/bot atacaver3.png" id="6_va5hm"]
+[ext_resource type="Texture2D" uid="uid://dugxi5nrdncy4" path="res://Assets/Sprites/Characters/Bot/Attack/bot atacaver4.png" id="7_0ysw7"]
+[ext_resource type="Texture2D" uid="uid://dktepimsuwd51" path="res://Assets/Sprites/Characters/Bot/Death/bot muerever2.png" id="7_jfom8"]
+[ext_resource type="Texture2D" uid="uid://sf24dh6apkss" path="res://Assets/Sprites/Characters/Bot/Idle/bot idlever4.png" id="8_3wias"]
+[ext_resource type="Texture2D" uid="uid://d0aawsq4gxb0t" path="res://Assets/Sprites/Characters/Bot/Attack/bot atacaver5.png" id="8_8fpxl"]
+[ext_resource type="Texture2D" uid="uid://byuceags0b75j" path="res://Assets/Sprites/Characters/Bot/Death/bot muerever3.png" id="8_vqmbc"]
+[ext_resource type="Texture2D" uid="uid://ce0k332eybmjk" path="res://Assets/Sprites/Characters/Bot/Attack/bot atacaver6.png" id="9_24jf7"]
+[ext_resource type="AudioStream" uid="uid://cmeutvwbhl64q" path="res://Assets/Audio/Enemy/Attack2.wav" id="9_iad4h"]
+[ext_resource type="Texture2D" uid="uid://pm206uyxa4a1" path="res://Assets/Sprites/Characters/Bot/Death/bot muerever4.png" id="9_qqn4l"]
+[ext_resource type="Texture2D" uid="uid://bvhtcj1ed7bbb" path="res://Assets/Sprites/Characters/Bot/Idle/bot idlever5.png" id="9_r1g7f"]
+[ext_resource type="Texture2D" uid="uid://02t5gdmofm1p" path="res://Assets/Sprites/Characters/Bot/Death/bot muerever5.png" id="10_ui3cs"]
+[ext_resource type="Texture2D" uid="uid://wu0q3dioullc" path="res://Assets/Sprites/Characters/Bot/Idle/bot idlever6.png" id="10_v2kev"]
+[ext_resource type="Texture2D" uid="uid://c71syoj4kmimu" path="res://Assets/Sprites/Characters/Bot/Death/bot muerever6.png" id="11_bl3l7"]
+[ext_resource type="Texture2D" uid="uid://6mbpjt80uxc5" path="res://Assets/Sprites/Characters/Bot/Death/bot muerever7.png" id="12_3gkwl"]
+[ext_resource type="AudioStream" uid="uid://cx0pl60t2lexe" path="res://Assets/Audio/Enemy/Die.wav" id="17_8lm7x"]
+[ext_resource type="Texture2D" uid="uid://43oru2surfsv" path="res://Assets/Sprites/Characters/Bot/Idle/bot idlever2.png" id="20_oxu28"]
+[ext_resource type="Texture2D" uid="uid://eddv6h01boc1" path="res://Assets/Sprites/Characters/Bot/Move/botver2.png" id="24_rnqo7"]
+[ext_resource type="Texture2D" uid="uid://bgaxrgv6g7m3v" path="res://Assets/Sprites/Characters/Bot/Move/botver3.png" id="25_q4oe2"]
+[ext_resource type="Texture2D" uid="uid://diroytn24k56v" path="res://Assets/Sprites/Characters/Bot/Move/botver4.png" id="26_rhrvs"]
+[ext_resource type="Texture2D" uid="uid://cw6xp7ne6bgnv" path="res://Assets/Sprites/Characters/Bot/Move/botver5.png" id="27_rxumo"]
+[ext_resource type="Texture2D" uid="uid://dopdmt40s153p" path="res://Assets/Sprites/Characters/Bot/Hurt/bot Dañover3.png" id="28_dkx1x"]
+[ext_resource type="Texture2D" uid="uid://dg5yqgcsibg8b" path="res://Assets/Sprites/Characters/Bot/Hurt/bot Dañover4.png" id="29_v05yx"]
+[ext_resource type="AudioStream" uid="uid://dmhxgl1xmi7o4" path="res://Assets/Audio/Enemy/TakeHit.wav" id="30_mmyvg"]
+[ext_resource type="Script" path="res://Scripts/Characters/AttackHitbox.cs" id="43_766tu"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy/EnemyStunState.cs" id="44_rcgvw"]
+[ext_resource type="PackedScene" uid="uid://b73b2lo4q8pg5" path="res://Scenes/Characters/state_machine.tscn" id="99_bulcw"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy/EnemyIdleState.cs" id="100_vl0r2"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy/EnemyReturnState.cs" id="102_ewe5c"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy/EnemyPatrolState.cs" id="103_vmqi3"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy/EnemyChaseState.cs" id="104_r3d0u"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy/EnemyAttackState.cs" id="105_b7s5b"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy/EnemyDeathState.cs" id="107_yy0hn"]
+
+[sub_resource type="Resource" id="Resource_dmi1t"]
+script = ExtResource("2_o6ybb")
+StatType = 0
+StatValue = 60.0
+
+[sub_resource type="Resource" id="Resource_xkbbt"]
+script = ExtResource("2_o6ybb")
+StatType = 1
+StatValue = 4.0
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3eofw"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_roghq"]
+bg_color = Color(0, 0, 0, 0.501961)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_bottom = 3.0
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hosgq"]
+bg_color = Color(0.529412, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 3
+border_color = Color(0.243137, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_bottom = 3.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xbl3o"]
+resource_local_to_scene = true
+render_priority = 1
+shader = ExtResource("3_rkxao")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/tex = ExtResource("20_oxu28")
+
+[sub_resource type="Animation" id="Animation_t310h"]
+resource_name = "Attac"
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666668, 0.833335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_jjfs3"), ExtResource("6_va5hm"), ExtResource("7_0ysw7"), ExtResource("7_0ysw7"), ExtResource("8_8fpxl"), ExtResource("9_24jf7"), ExtResource("5_jjfs3")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../StateMachine/AttackState")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.833333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"PerformHit"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AudioStreamPlayer3D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("9_iad4h")
+}],
+"times": PackedFloat32Array(0.5)
+}
+tracks/2/use_blend = true
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AnimationPlayer:speed_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.833333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 1.5, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_503eh"]
+resource_name = "Death"
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.500001, 0.666668, 0.833335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_jfom8"), ExtResource("8_vqmbc"), ExtResource("9_qqn4l"), ExtResource("10_ui3cs"), ExtResource("11_bl3l7"), ExtResource("12_3gkwl"), ExtResource("5_tpt3q")]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AudioStreamPlayer3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_8lm7x")
+}],
+"times": PackedFloat32Array(0.166667)
+}
+tracks/1/use_blend = true
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AnimationPlayer:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_bpton"]
+resource_name = "Idle"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("20_oxu28"), ExtResource("5_yicw7"), ExtResource("8_3wias"), ExtResource("9_r1g7f"), ExtResource("10_v2kev")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimationPlayer:speed_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_t8lbd"]
+resource_name = "Move"
+step = 0.333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666666, 0.999999),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("24_rnqo7"), ExtResource("25_q4oe2"), ExtResource("26_rhrvs"), ExtResource("27_rxumo")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimationPlayer:speed_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_jemxy"]
+resource_name = "Stun"
+step = 0.333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666666, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_phyuw"), ExtResource("28_dkx1x"), ExtResource("29_v05yx"), ExtResource("29_v05yx")]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AudioStreamPlayer3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("30_mmyvg")
+}],
+"times": PackedFloat32Array(0.333333)
+}
+tracks/1/use_blend = true
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AnimationPlayer:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g15or"]
+_data = {
+"Attack": SubResource("Animation_t310h"),
+"Death": SubResource("Animation_503eh"),
+"Idle": SubResource("Animation_bpton"),
+"Move": SubResource("Animation_t8lbd"),
+"Stun": SubResource("Animation_jemxy")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fbq43"]
+radius = 0.417107
+height = 1.16648
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_swamk"]
+radius = 4.31125
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_p7oyh"]
+radius = 0.583839
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bvn4w"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="Enemy" type="CharacterBody3D" node_paths=PackedStringArray("AnimPlayerNode", "SpriteNode", "healthBar", "StateMachineNode", "HurtBoxNode", "HitBoxNode", "HitBoxShapeNode", "ShaderTimerNode", "AgentNode", "ChaseAreaNode", "AttackAreaNode")]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_mg2bf")
+stats = Array[Object]([SubResource("Resource_dmi1t"), SubResource("Resource_xkbbt")])
+AnimPlayerNode = NodePath("AnimationPlayer")
+SpriteNode = NodePath("Sprite3D")
+healthBar = NodePath("SubViewport/ProgressBar")
+StateMachineNode = NodePath("StateMachine")
+HurtBoxNode = NodePath("HurtBox")
+HitBoxNode = NodePath("HitBox")
+HitBoxShapeNode = NodePath("HitBox/CollisionShape3D")
+ShaderTimerNode = NodePath("ShaderTimer")
+AgentNode = NodePath("NavigationAgent3D")
+ChaseAreaNode = NodePath("ChaseArea")
+AttackAreaNode = NodePath("AtackingArea")
+
+[node name="Healthbar" type="Sprite3D" parent="."]
+process_priority = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.838513, 0)
+render_priority = 1
+texture = SubResource("ViewportTexture_3eofw")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(254, 256)
+render_target_update_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="SubViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -8.0
+offset_right = 64.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_roghq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hosgq")
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="SubViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -11.5
+offset_right = 59.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_a6c00")
+theme_override_font_sizes/font_size = 12
+text = "Bot Golondrina"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+material_overlay = SubResource("ShaderMaterial_xbl3o")
+pixel_size = 0.0015
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("9_24jf7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite3D")
+libraries = {
+"": SubResource("AnimationLibrary_g15or")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00961711, 0.0192509, 0)
+shape = SubResource("CapsuleShape3D_fbq43")
+
+[node name="StateMachine" parent="." node_paths=PackedStringArray("currenState", "states") instance=ExtResource("99_bulcw")]
+currenState = NodePath("IdleState")
+states = [NodePath("IdleState"), NodePath("ReturnState"), NodePath("PatrolState"), NodePath("ChaseState"), NodePath("AttackState"), NodePath("DeathState"), NodePath("StunState")]
+
+[node name="IdleState" type="Node" parent="StateMachine"]
+script = ExtResource("100_vl0r2")
+
+[node name="ReturnState" type="Node" parent="StateMachine"]
+script = ExtResource("102_ewe5c")
+
+[node name="PatrolState" type="Node" parent="StateMachine" node_paths=PackedStringArray("idleTimerNode")]
+script = ExtResource("103_vmqi3")
+idleTimerNode = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="StateMachine/PatrolState"]
+one_shot = true
+
+[node name="ChaseState" type="Node" parent="StateMachine" node_paths=PackedStringArray("chaseTimerNode")]
+script = ExtResource("104_r3d0u")
+chaseTimerNode = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="StateMachine/ChaseState"]
+wait_time = 0.5
+autostart = true
+
+[node name="AttackState" type="Node" parent="StateMachine"]
+script = ExtResource("105_b7s5b")
+
+[node name="DeathState" type="Node" parent="StateMachine"]
+script = ExtResource("107_yy0hn")
+
+[node name="StunState" type="Node" parent="StateMachine" node_paths=PackedStringArray("cooldownTimerNode")]
+script = ExtResource("44_rcgvw")
+cooldownTimerNode = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="StateMachine/StunState"]
+one_shot = true
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="ChaseArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ChaseArea"]
+shape = SubResource("SphereShape3D_swamk")
+
+[node name="AtackingArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AtackingArea"]
+shape = SubResource("SphereShape3D_p7oyh")
+
+[node name="HurtBox" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0203071, 0)
+shape = SubResource("CapsuleShape3D_fbq43")
+
+[node name="HitBox" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0403285, 0, 0)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("43_766tu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
+shape = SubResource("BoxShape3D_bvn4w")
+disabled = true
+
+[node name="ShaderTimer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
